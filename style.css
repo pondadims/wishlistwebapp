@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 25px;
+    border: groove solid black;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100px;
+    transition: 0.3s color;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+
+}
+
+.nav-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: #009970;
+        visibility: hidden;
+        transition: 0.3s case-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nsv-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.hero-section {
+    background: url(./asset/img/pexels-karolina-grabowska-5239812.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-section::before {
+    background-color: rgba(0, 0, 0, 0.3);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+
+
+
+
+/* button start */
+#startButton {
+    position: relative;
+    padding: 10px 22px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#startButton:active {
+    transform: scale(0.96);
+}
+
+#startButton::before,
+#startButton::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+#startButton.animate::before {
+    top: -70%;
+    background-image: radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #0d6efd 20%, transparent 30%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #0d6efd 15%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%);
+
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    animation: topBubbles 0.6s ease-in-out infinite;
+}
+
+@keyframes topBubbles {
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+            50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+            50% 40%, 65% 10%, 90% 20%;
+        background-size: 0%, 0%, 0%, 0%, 0%, 0%, 0%, 0%, 0%, 0%, 0%, 0%;
+    }
+}
+
+#startButton.animate::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #0d6efd 15%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%),
+        radial-gradient(circle, #0d6efd 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out infinite;
+}
+
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+/* about */
+#about {
+    background-color: #f8f9fa;
+}
+
+#about .card {
+    transition: transform 0.2s;
+    border: none;
+}
+
+#about .card:hover {
+    transform: scale(1.05);
+}
+
+#about .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Catalog */
+table tr td {
+    vertical-align: middle;
+}
+
+td button {
+    margin: 5px;
+}
+
+td button i {
+    font-size: 20px;
+}
+
+.modal-header {
+    background: #0d6efd;
+    color: #fff;
+}
+
+.modal-body form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.modal-body form .imgholder {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imgholder .upload {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload i {
+    color: #fff;
+    font-size: 35px;
+}
+
+.imgholder:hover .upload {
+    display: flex;
+}
+
+.imgholder .upload input {
+    display: none;
+}
+
+.modal-body form .inputField {
+    flex-basis: 68%;
+    border-left: 5px groove blue;
+    padding-left: 20px;
+}
+
+form .inputField>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .inputField>div label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userForm form .inputField>div label::after {
+    content: "*";
+    color: red;
+}
+
+form .inputField>div input {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid blue;
+}
+
+.modal-footer .submit {
+    font-size: 18px;
+}
+
+#readData form .inputField>div input {
+    color: #000;
+    font-size: 18px;
+}
